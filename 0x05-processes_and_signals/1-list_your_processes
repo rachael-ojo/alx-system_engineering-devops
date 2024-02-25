@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This Bash script checks the disk usage of the home directory
+# and sends an email notification if it exceeds a certain threshold.
 
 printf "%-10s %-10s %-5s %-5s %-8s %-8s %-10s %-6s %-10s\n" "USER" "PID" "%CPU" "%MEM" "VSZ" "RSS" "TTY" "STAT" "START"
 echo "============================================================================="
