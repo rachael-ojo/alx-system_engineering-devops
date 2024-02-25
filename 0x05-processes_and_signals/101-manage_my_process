@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This Bash script checks the disk usage of the home directory
+SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
+MANAGE_SCRIPT="$SCRIPT_DIR/manage_my_process"
+DIR="$(cd "$(dirname "$0")" && pwd)"
+"$DIR/manage_my_process" "$@"
+case "$1" in
+    start)
+        "$MANAGE_SCRIPT" start
+        ;;
+    stop)
+        "$MANAGE_SCRIPT" stop
+        ;;
+    restart)
+        "$MANAGE_SCRIPT" restart
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
