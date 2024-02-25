@@ -1,3 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# This Bash script checks the disk usage of the home directory
+# and sends an email notification if it exceeds a certain threshold.
 
 echo "The PID of this script is: $$"
