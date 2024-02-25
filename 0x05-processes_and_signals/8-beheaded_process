@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This Bash script checks the disk usage of the home directory
+stop_highlander()
+{
+    pkill -f "7-highlander"
+    echo "7-highlander process stopped."
+}
+stop_highlander
