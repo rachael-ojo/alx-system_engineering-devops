@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This Bash script checks the disk usage of the home directory
+# shellcheck -e SC2059 myscript
+# Display lines containing the word "bash" and extract PID
+ps -ef | grep bash | grep -v grep
