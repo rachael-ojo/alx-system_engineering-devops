@@ -8,6 +8,15 @@ handle_sigterm() {
 # Trap SIGTERM signal and call handle_sigterm function
 trap 'handle_sigterm' SIGTERM
 
+# Function to stop the "7-highlander" process
+stop_highlander() {
+    pkill -f "7-highlander"
+    echo "7-highlander process stopped."
+}
+
+# Trap SIGINT signal and call stop_highlander function
+trap 'stop_highlander' SIGINT
+
 # Loop indefinitely
 while true; do
     echo "To infinity and beyond"
