@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This Bash script checks the disk usage of the home directory
+# Display PID and process name for processes containing the word "bash"
+pgrep -l bash
