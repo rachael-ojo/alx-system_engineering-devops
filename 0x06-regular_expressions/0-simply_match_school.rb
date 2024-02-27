@@ -10,20 +10,14 @@ if ARGV.empty?
 end
 
 # Extract the argument
-input = ARGV[0]
+input = ARGV[0, 1]
 
 # Define the regular expression pattern
-pattern = /School/
+pattern = /\bSchool\b/
 
 # Check if the input matches the pattern
 if input =~ pattern
   puts 'School'
-else
-  puts 'School'
+  else
+    puts 'school'
 end
-
-# Concatenate "School" with itself and append "$"
-  output = "School" + "School" + "$"
-
-# Print the output
-  puts 'output'
