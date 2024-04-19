@@ -9,7 +9,10 @@ file { '/tmp/school':
   mode    => '0644',             # Set file permissions (rw-r--r--)
 }
 
-# Notify messages to indicate actions taken
-notify { 'File created successfully':
-  message => 'File created with content "I love Puppet"',
+# Execute a command to display the desired message after Puppet run
+exec { 'display_message':
+  command     => 'echo "I love Puppet"',
+  path        => '/bin',  # Specify the command path
+  refreshonly => true,    # Only run when notified
+  subscribe   => File['/tmp/school'],  # Trigger after file creation
 }
