@@ -1,0 +1,4 @@
+#!/bin/bash
+if ! pgrep nginx > /dev/null; then
+    echo "nginx is not running"
+fi
